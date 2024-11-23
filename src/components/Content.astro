@@ -53,13 +53,49 @@ const links: Links[] = [
       <br />
       las guitarras 🎸
       <br />
-      <div
-        class="mt-4 animate-squeeze animate-duration-1000 animate-delay-none animate-steps-modern animate-iteration-count-infinite"
-      >
-        <span class="text-lg italic sour-gummy-500"
-          >🥒 soy un pepinillo empedernido 🥒
-        </span>
-      </div>
+
+      <button
+        id="game"
+        class="mt-8 animate-squeeze animate-duration-1000 animate-delay-none animate-steps-modern animate-iteration-count-infinite text-lg italic sour-gummy-500"
+        >🥒 soy un pepinillo empedernido, tocame 🥒
+      </button>
     </p>
   </section>
+  <div id="game-container" class="hidden">
+    <section class="flex justify-center absolute top-0">
+      <div class="absolute top-0 left-0 p-2">
+        <span class="text-black ml-2 font-medium mt-1">Ad</span>
+        <button
+          class="ml-4 bg-lime-500 rounded-full px-3 py-2 shadow-lg shadow-lime-500/50 sour-gummy-500 animate-squeeze animate-duration-1000 animate-delay-none animate-steps-modern animate-iteration-count-infinite"
+          onclick="hola()">Click me!</button
+        >
+      </div>
+
+      <iframe src="https://tbot.xyz/lumber/" class="h-[700px] rounded-lg"
+      ></iframe>
+    </section>
+    <section class="flex justify-center absolute bottom-0 right-0">
+      <div class="absolute top-0 left-0 p-2">
+        <span class="text-black ml-2 font-medium mt-1">Ad</span>
+        <button
+          type="button"
+          class="ml-4 bg-lime-500 rounded-full px-3 py-2 shadow-lg shadow-lime-500/50 sour-gummy-500 animate-squeeze animate-duration-1000 animate-delay-none animate-steps-modern animate-iteration-count-infinite"
+          >Click me!</button
+        >
+      </div>
+
+      <iframe src="https://tbot.xyz/lumber/" class="h-[700px] rounded-lg"
+      ></iframe>
+    </section>
+  </div>
 </main>
+
+<script>
+  const game = document.getElementById("game-container");
+  const button = document.getElementById("game");
+  //game?.classList.remove("hidden");
+  button?.addEventListener("click", () => {
+    game?.classList.remove("hidden");
+    console.log("hola");
+  });
+</script>
