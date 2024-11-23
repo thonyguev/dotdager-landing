@@ -1,0 +1,65 @@
+---
+interface Links {
+  value: string;
+  icon: string;
+  text: string;
+}
+const links: Links[] = [
+  {
+    value: "https://www.youtube.com/@DotDager",
+    icon: "youtube.svg",
+    text: "youtube",
+  },
+  {
+    value: "https://www.twitch.tv/dagerxiv",
+    icon: "twitch.svg",
+    text: "twitch",
+  },
+  {
+    value: "https://www.instagram.com/dager.32",
+    icon: "instagram_dark.svg",
+    text: "instagram",
+  },
+];
+---
+
+<main class="grid grid-cols-1 md:px-[15%]">
+  <section class="grid grid-cols-1 place-items-center gap-0">
+    <h1
+      class=" px-3 py-2 text-4xl font-semibold sour-gummy-500 text-indigo-500 shadow-lg shadow-indigo-500/50"
+    >
+      Dot Dager
+    </h1>
+    <img src="./profile.webp" alt="logo" class="h-44 rounded-full" />
+    <div id="redes" class="flex gap-3">
+      {
+        links.map((link) => (
+          <a
+            href={link.value}
+            target="_blank"
+            class="rounded-full border border-stone-700/75 p-3 hover:border-indigo-500 hover:shadow-lg hover:shadow-indigo-500/50"
+          >
+            <img src={link.icon} alt={link.text} class="h-8 aspect-square" />
+          </a>
+        ))
+      }
+    </div>
+    <p class="text-lg text-center sour-gummy-200">
+      Hola, soy creador de contenidos que ama ❤️,
+      <br />
+      la programación 💻,
+      <br />
+      los gatos 😽,
+      <br />
+      las guitarras 🎸
+      <br />
+      <div
+        class="mt-4 animate-squeeze animate-duration-1000 animate-delay-none animate-steps-modern animate-iteration-count-infinite"
+      >
+        <span class="text-lg italic sour-gummy-500"
+          >🥒 soy un pepinillo empedernido 🥒
+        </span>
+      </div>
+    </p>
+  </section>
+</main>
